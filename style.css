@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container video{
+    border: solid 3px steelblue;
+    border-radius: 6px;
+}
+.container button{
+    background-color: rgb(106, 18, 189);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px; 
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.container p,h1{
+    color: white;
+}
+
+body{
+    background-color: rgb(8, 50, 85);
+}
