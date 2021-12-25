@@ -7,7 +7,7 @@ const url = "https://iptv-org.github.io/iptv/channels.json";
 fetch(url)
     .then(response => response.json())
     .then(data =>
-        //channelurl.push(data[Math.floor(Math.random() * data.length)].url),
+        //when click the button play random channel
         play.addEventListener("click", () => {
             document.getElementById("vid").src = data[Math.floor(Math.random() * data.length)].url;
             var player = videojs('hls-example');
