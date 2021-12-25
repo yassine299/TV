@@ -15,10 +15,15 @@
     border-radius: 6px; 
     cursor: pointer;
     margin-top: 30px;
+    transition: ease 1s;
+}
+.container button:hover{
+    background-color: rgb(34, 5, 80);
 }
 
-.container p,h1{
+.container p,h1,h2{
     color: white;
+    text-align: center;
 }
 
 body{
