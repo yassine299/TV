@@ -16,11 +16,21 @@
         <h1>Watch Random channel around the world For Free!!</h1>
         <h2>More than 6000 Channel</h2>
         <p>If its not working refresh the page</p>
-        <video id='hls-example' class="video-js vjs-default-skin" width="500" height="400" controls>
+        <video id='hls-example' class="video-js vjs-default-skin" width="400" height="300" controls>
             <source id="vid" type="application/x-mpegURL" src="">
         </video>
 
         <button id="stream">play channel</button>
+
+        <select id="myList" onchange="select()">
+            <option>Choose a channel</option>
+        </select>
+        <p>to choice other channel click next button</p>
+        <button onclick="getchannel()" id="btn">get New Channel</button>
+        <video id='get_channel' class="video-js vjs-default-skin" width="400" height="300" controls>
+            <source id="vid2" type="application/x-mpegURL" src="">
+        </video>
+
     </div>
 
 
