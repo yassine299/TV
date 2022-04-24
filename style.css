@@ -25,6 +25,12 @@
     color: white;
     text-align: center;
 }
+#hls-example{
+    margin: 40px;
+}
+#myList{
+    margin: 20px;
+}
 
 body{
     background-color: rgb(8, 50, 85);
