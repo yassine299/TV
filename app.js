@@ -22,9 +22,9 @@ fetch(url)
 //ps:fix the reload problem 
 
 function select() {
+    var index =0 ;
     var myList = document.getElementById("myList");
     var selected = myList.options[myList.selectedIndex].text;
-    console.log(selected)
     fetch(url)
         .then(response => response.json())
         .then(data =>
@@ -34,16 +34,17 @@ function select() {
                     document.getElementById("vid2").src = ch;
                     var player = videojs("get_channel");
                     player.play();
-                    console.log(el.name + "=" + el.url)
+                    console.log(el.name + ""+el.url)
                 }
-            })
-
+           
+            }
         )
+      
+    )
+   
 }
 
-function getchannel() {
-    window.location.reload();
-}
+
 
 
 //Load select button 
