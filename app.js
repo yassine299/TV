@@ -4,7 +4,7 @@ var play2 = document.getElementById("btn");
 
 
 //get the data information from api
-const url = "https://iptv-org.github.io/iptv/channels.json";
+const url = "https://iptv-org.github.io/api/streams.json";
 
 fetch(url)
     .then(response => response.json())
@@ -17,24 +17,22 @@ fetch(url)
         }
         )
     );
-
+    
 //search for channels 
 //ps:fix the reload problem 
 
 function select() {
-    var index =0 ;
     var myList = document.getElementById("myList");
     var selected = myList.options[myList.selectedIndex].text;
     fetch(url)
         .then(response => response.json())
         .then(data =>
             data.map(el => {
-                if (el.name == selected) {
+                if (el.channel == selected) {
                     var ch = el.url
                     document.getElementById("vid2").src = ch;
                     var player = videojs("get_channel");
                     player.play();
-                    console.log(el.name + ""+el.url)
                 }
            
             }
@@ -53,8 +51,8 @@ fetch(url)
     .then(response => response.json())
     .then(data =>
         data.map(element => {
-            if (element.name.includes("")) {
-                tv.push(element.name);
+            if (element.channel.includes("")) {
+                tv.push(element.channel);
 
 
                 var select = document.getElementById("myList");
